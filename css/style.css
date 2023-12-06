@@ -106,7 +106,7 @@ section.home {
   right: 0;
   width: 60px;
   height: 60px;
-  background: var(--primary-color) url(/images/menu.png);
+  background: var(--primary-color) url(../images/menu.png);
   background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
