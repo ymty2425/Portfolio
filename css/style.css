@@ -165,13 +165,13 @@ section.home {
 }
 
 .nav .social a {
-  transform: scale(.5);
+  transform: scale(.6);
   display: inline-block
 }
 
-.nav .email-icon {
-  bottom: 20px;
-  transform: scale(.5)
+.nav .social .email-icon {
+  position: absolute;
+  top: 550px;
 }
 
 .title {
