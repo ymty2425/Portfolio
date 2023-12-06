@@ -1,4 +1,18 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
+
+.logo,
+.nav .email-icon,
+.nav .social {
+  position: absolute
+}
+
+.nav ul li,
+.skills,
+.title {
+  text-align: center
+}
 
 .contact-btn,
 .toggle {
@@ -17,6 +31,12 @@
   text-decoration: none
 }
 
+.nav,
+.nav .social,
+section {
+  display: flex
+}
+
 :root {
   --primary-color: #d91c28;
   --secondary-color: #1b206e
@@ -30,8 +50,8 @@
 
 body,
 html {
-  font-family: Poppins, sans-serif;
-  color: #111;
+  font-family: 'Merriweather', 'lato', sans-serif;
+  color: #111
 }
 
 h1 {
@@ -42,11 +62,10 @@ h1 {
 p {
   margin: 20px 0 10px 5px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 400
 }
 
 section {
-  display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
@@ -62,7 +81,7 @@ section.home {
 .contact-btn {
   background: var(--primary-color);
   padding: 15px 30px;
-  margin: 30px 0px;
+  margin: 30px 0
 }
 
 .contact-btn:hover {
@@ -70,7 +89,6 @@ section.home {
 }
 
 .logo {
-  position: absolute;
   top: 20px;
   left: 100px;
   font-size: 2.5rem;
@@ -78,8 +96,12 @@ section.home {
   z-index: 20
 }
 
+.nav,
 .toggle {
-  position: fixed;
+  position: fixed
+}
+
+.toggle {
   top: 0;
   right: 0;
   width: 60px;
@@ -88,11 +110,12 @@ section.home {
   background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 20;
+  z-index: 20
 }
 
-.nav,
-.gallery .item img {
+.gallery .item .action,
+.gallery .item img,
+.nav {
   width: 100%;
   height: 100%
 }
@@ -104,13 +127,11 @@ section.home {
   background-repeat: no-repeat
 }
 
-.nav{
-  position: fixed;
+.nav {
   top: 0;
   left: 100%;
   background-color: #fff;
   z-index: 15;
-  display: flex;
   justify-content: center;
   align-items: center
 }
@@ -120,8 +141,7 @@ section.home {
 }
 
 .nav ul li {
-  list-style: none;
-  text-align: center
+  list-style: none
 }
 
 .nav ul li a {
@@ -136,12 +156,10 @@ section.home {
 }
 
 .nav .social {
-  position: absolute;
   top: 0;
   left: 0;
   width: 60px;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center
 }
@@ -152,7 +170,6 @@ section.home {
 }
 
 .nav .email-icon {
-  position: absolute;
   bottom: 20px;
   transform: scale(.5)
 }
@@ -163,8 +180,7 @@ section.home {
   color: #000;
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: .2rem;
-  text-align: center
+  letter-spacing: .2rem
 }
 
 .title span {
@@ -175,7 +191,7 @@ section.home {
   position: relative;
   max-width: 700px;
   z-index: 10;
-  margin: 20px;
+  margin: 20px
 }
 
 .home-img {
@@ -191,8 +207,7 @@ section.home {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  text-align: center
+  gap: 40px
 }
 
 .skills .skill {
@@ -219,9 +234,6 @@ section.home {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px
-  /* display: grid;
-  grid-template-columns: repeat(6,1fr);
-  margin-top: 5px; */
 }
 
 .gallery .item {
@@ -235,8 +247,6 @@ section.home {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, .8);
   display: flex;
   justify-content: center;
@@ -264,7 +274,7 @@ section.home {
   width: auto;
   height: auto;
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5)
 }
 
 #contact .contact {
@@ -340,7 +350,7 @@ section.home {
   }
 
   .home-img {
-    height: 110%;
+    height: 110%
   }
 
   .logo {
@@ -377,28 +387,28 @@ section.home {
   }
 
   #contact .contact-info h1 {
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 350;
     margin-bottom: 5px
   }
-  
+
   #contact .contact-info h2 {
     font-size: 1.3rem;
     line-height: 2rem;
-    font-weight: 350;
+    font-weight: 350
   }
 
   .expanded {
     max-width: 60%;
-    max-height: 80%;
+    max-height: 80%
   }
 }
 
 @media (max-width:768px) {
   .contact-btn {
-    padding: 10px 25px;
+    padding: 10px 25px
   }
-  
+
   .skills {
     grid-template-columns: 1fr
   }
@@ -408,11 +418,11 @@ section.home {
   }
 
   #contact .contact-items {
-    width: 150%;
+    width: 150%
   }
 
   .expanded {
     max-width: 80%;
-    max-height: 80%;
+    max-height: 80%
   }
 }
