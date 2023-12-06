@@ -1,24 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
 
-.btn,
+.contact-btn,
 .toggle {
   cursor: pointer
 }
 
-.navigation ul,
-.navigation ul li {
+.nav ul,
+.nav ul li {
   position: relative
 }
 
-.btn,
-.portfolio .item .action a {
+.contact-btn,
+.gallery .item .action a {
   display: inline-block;
   color: #fff;
   text-decoration: none
 }
 
 :root {
-  --primary-color: #f60f20;
+  --primary-color: #d91c28;
   --secondary-color: #1b206e
 }
 
@@ -35,13 +35,14 @@ html {
 }
 
 h1 {
-  font-size: 30px;
-  font-weight: 500
+  font-size: 45px;
+  font-weight: 550
 }
 
 p {
-  margin: 20px 0 10px;
-  font-size: 1.1rem
+  margin: 20px 0 10px 5px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 section {
@@ -58,23 +59,22 @@ section.home {
   margin-top: 0
 }
 
-.btn {
+.contact-btn {
   background: var(--primary-color);
-  padding: 10px 30px;
-  margin: 20px 0;
-  border: 0
+  padding: 15px 30px;
+  margin: 30px 0px;
 }
 
-.btn:hover {
-  transform: scale(.98)
+.contact-btn:hover {
+  transform: scale(.97)
 }
 
 .logo {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 100px;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
   z-index: 20
 }
 
@@ -84,15 +84,15 @@ section.home {
   right: 0;
   width: 60px;
   height: 60px;
-  background: var(--primary-color) url(../images/menu.png);
+  background: var(--primary-color) url(/images/menu.png);
   background-size: 30px;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 20
+  z-index: 20;
 }
 
-.navigation,
-.portfolio .item img {
+.nav,
+.gallery .item img {
   width: 100%;
   height: 100%
 }
@@ -104,7 +104,7 @@ section.home {
   background-repeat: no-repeat
 }
 
-.navigation {
+.nav{
   position: fixed;
   top: 0;
   left: 100%;
@@ -115,27 +115,27 @@ section.home {
   align-items: center
 }
 
-.navigation.active {
+.nav.active {
   left: 0
 }
 
-.navigation ul li {
+.nav ul li {
   list-style: none;
   text-align: center
 }
 
-.navigation ul li a {
-  font-size: 2.2rem;
+.nav ul li a {
+  font-size: 2.5rem;
   color: #111;
   text-decoration: none;
   font-weight: 300
 }
 
-.navigation ul li a:hover {
+.nav ul li a:hover {
   color: var(--primary-color)
 }
 
-.navigation .social-bar {
+.nav .social {
   position: absolute;
   top: 0;
   left: 0;
@@ -146,18 +146,18 @@ section.home {
   align-items: center
 }
 
-.navigation .social-bar a {
-  display: inline-block;
-  transform: scale(.5)
+.nav .social a {
+  transform: scale(.5);
+  display: inline-block
 }
 
-.navigation .email-icon {
+.nav .email-icon {
   position: absolute;
   bottom: 20px;
   transform: scale(.5)
 }
 
-.section-title {
+.title {
   font-size: 4rem;
   font-weight: 300;
   color: #000;
@@ -167,14 +167,15 @@ section.home {
   text-align: center
 }
 
-.section-title span {
+.title span {
   color: #dc143c
 }
 
 .home-content {
   position: relative;
+  max-width: 700px;
   z-index: 10;
-  max-width: 600px
+  margin: 20px;
 }
 
 .home-img {
@@ -182,10 +183,11 @@ section.home {
   bottom: 0;
   right: 0;
   height: 110%;
-  opacity: .35
+  opacity: .35;
+  width: 100%
 }
 
-.services {
+.skills {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -193,40 +195,43 @@ section.home {
   text-align: center
 }
 
-.services .service {
+.skills .skill {
   padding: 30px
 }
 
-.services .service:hover {
+.skills .skill:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, .1)
 }
 
-.services .service h2 {
+.skills .skill h2 {
   font-size: 24px;
   font-weight: 500;
   margin-top: 20px;
   color: var(--secondary-color)
 }
 
-.services .service .icon img {
+.skills .skill .icon img {
   max-width: 100px
 }
 
-.portfolio {
+.gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px
+  /* display: grid;
+  grid-template-columns: repeat(6,1fr);
+  margin-top: 5px; */
 }
 
-.portfolio .item {
+.gallery .item {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 5px
+  width: 200px;
+  height: 200px;
+  margin: 10px
 }
 
-.portfolio .item .action {
+.gallery .item .action {
   position: absolute;
   top: 0;
   left: 0;
@@ -240,13 +245,26 @@ section.home {
   transition: .5s
 }
 
-.portfolio .item:hover .action {
+.gallery .item:hover .action {
   opacity: 1
 }
 
-.portfolio .item .action a {
+.gallery .item .action a {
   border: 1px solid #fff;
   padding: 5px 15px
+}
+
+.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #contact .contact {
@@ -322,24 +340,24 @@ section.home {
   }
 
   .home-img {
-    display: none
+    height: 110%;
   }
 
   .logo {
-    top: 10px;
+    top: 8px;
     left: 40px;
-    font-size: 1.5rem
+    font-size: 2.5rem
   }
 
   section {
     padding: 100px 40px
   }
 
-  .navigation ul li a {
-    font-size: 2rem
+  .nav ul li a {
+    font-size: 2.2rem
   }
 
-  .services {
+  .skills {
     grid-template-columns: repeat(2, 1fr)
   }
 
@@ -357,14 +375,44 @@ section.home {
   .contact-info {
     margin-top: 20px
   }
+
+  #contact .contact-info h1 {
+    font-size: 2.0rem;
+    font-weight: 350;
+    margin-bottom: 5px
+  }
+  
+  #contact .contact-info h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 350;
+  }
+
+  .expanded {
+    max-width: 60%;
+    max-height: 80%;
+  }
 }
 
 @media (max-width:768px) {
-  .services {
+  .contact-btn {
+    padding: 10px 25px;
+  }
+  
+  .skills {
     grid-template-columns: 1fr
   }
 
-  .services .service {
+  .skills.skill {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .1)
+  }
+
+  #contact .contact-items {
+    width: 150%;
+  }
+
+  .expanded {
+    max-width: 80%;
+    max-height: 80%;
   }
 }
